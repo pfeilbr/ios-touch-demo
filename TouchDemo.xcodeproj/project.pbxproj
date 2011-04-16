@@ -17,6 +17,9 @@
 		C58E3E01135A103F00C05EDE /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58E3DFF135A103F00C05EDE /* MainWindow_iPhone.xib */; };
 		C58E3E05135A103F00C05EDE /* TouchDemoAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C58E3E04135A103F00C05EDE /* TouchDemoAppDelegate_iPad.m */; };
 		C58E3E08135A103F00C05EDE /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58E3E06135A103F00C05EDE /* MainWindow_iPad.xib */; };
+		C58E3E10135A108A00C05EDE /* TouchDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58E3E0F135A108A00C05EDE /* TouchDemoView.m */; };
+		C58E3E12135A2B9500C05EDE /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = C58E3E11135A2B9500C05EDE /* beep.wav */; };
+		C58E3E15135A2C9700C05EDE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E3E14135A2C9700C05EDE /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,18 +27,22 @@
 		C58E3DE9135A103F00C05EDE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C58E3DEB135A103F00C05EDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C58E3DED135A103F00C05EDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C58E3DF1135A103F00C05EDE /* TouchDemo-Info.plist */ = {isa = PBXFileReference; path = "TouchDemo-Info.plist"; sourceTree = "<group>"; };
+		C58E3DF1135A103F00C05EDE /* TouchDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TouchDemo-Info.plist"; sourceTree = "<group>"; };
 		C58E3DF3135A103F00C05EDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C58E3DF5135A103F00C05EDE /* TouchDemo-Prefix.pch */ = {isa = PBXFileReference; path = "TouchDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C58E3DF5135A103F00C05EDE /* TouchDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchDemo-Prefix.pch"; sourceTree = "<group>"; };
 		C58E3DF6135A103F00C05EDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C58E3DF8135A103F00C05EDE /* TouchDemoAppDelegate.h */ = {isa = PBXFileReference; path = TouchDemoAppDelegate.h; sourceTree = "<group>"; };
+		C58E3DF8135A103F00C05EDE /* TouchDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchDemoAppDelegate.h; sourceTree = "<group>"; };
 		C58E3DF9135A103F00C05EDE /* TouchDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchDemoAppDelegate.m; sourceTree = "<group>"; };
-		C58E3DFC135A103F00C05EDE /* TouchDemoAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = TouchDemoAppDelegate_iPhone.h; path = iPhone/TouchDemoAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		C58E3DFC135A103F00C05EDE /* TouchDemoAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TouchDemoAppDelegate_iPhone.h; path = iPhone/TouchDemoAppDelegate_iPhone.h; sourceTree = "<group>"; };
 		C58E3DFD135A103F00C05EDE /* TouchDemoAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TouchDemoAppDelegate_iPhone.m; path = iPhone/TouchDemoAppDelegate_iPhone.m; sourceTree = "<group>"; };
 		C58E3E00135A103F00C05EDE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		C58E3E03135A103F00C05EDE /* TouchDemoAppDelegate_iPad.h */ = {isa = PBXFileReference; name = TouchDemoAppDelegate_iPad.h; path = iPad/TouchDemoAppDelegate_iPad.h; sourceTree = "<group>"; };
+		C58E3E03135A103F00C05EDE /* TouchDemoAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TouchDemoAppDelegate_iPad.h; path = iPad/TouchDemoAppDelegate_iPad.h; sourceTree = "<group>"; };
 		C58E3E04135A103F00C05EDE /* TouchDemoAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TouchDemoAppDelegate_iPad.m; path = iPad/TouchDemoAppDelegate_iPad.m; sourceTree = "<group>"; };
 		C58E3E07135A103F00C05EDE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		C58E3E0E135A108A00C05EDE /* TouchDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchDemoView.h; sourceTree = "<group>"; };
+		C58E3E0F135A108A00C05EDE /* TouchDemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDemoView.m; sourceTree = "<group>"; };
+		C58E3E11135A2B9500C05EDE /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		C58E3E14135A2C9700C05EDE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58E3E15135A2C9700C05EDE /* AudioToolbox.framework in Frameworks */,
 				C58E3DEA135A103F00C05EDE /* UIKit.framework in Frameworks */,
 				C58E3DEC135A103F00C05EDE /* Foundation.framework in Frameworks */,
 				C58E3DEE135A103F00C05EDE /* CoreGraphics.framework in Frameworks */,
@@ -72,6 +80,7 @@
 		C58E3DE8135A103F00C05EDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C58E3E14135A2C9700C05EDE /* AudioToolbox.framework */,
 				C58E3DE9135A103F00C05EDE /* UIKit.framework */,
 				C58E3DEB135A103F00C05EDE /* Foundation.framework */,
 				C58E3DED135A103F00C05EDE /* CoreGraphics.framework */,
@@ -82,11 +91,14 @@
 		C58E3DEF135A103F00C05EDE /* TouchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C58E3E13135A2B9F00C05EDE /* sounds */,
 				C58E3DF8135A103F00C05EDE /* TouchDemoAppDelegate.h */,
 				C58E3DF9135A103F00C05EDE /* TouchDemoAppDelegate.m */,
 				C58E3DFB135A103F00C05EDE /* iPhone */,
 				C58E3E02135A103F00C05EDE /* iPad */,
 				C58E3DF0135A103F00C05EDE /* Supporting Files */,
+				C58E3E0E135A108A00C05EDE /* TouchDemoView.h */,
+				C58E3E0F135A108A00C05EDE /* TouchDemoView.m */,
 			);
 			path = TouchDemo;
 			sourceTree = "<group>";
@@ -120,6 +132,14 @@
 				C58E3E06135A103F00C05EDE /* MainWindow_iPad.xib */,
 			);
 			name = iPad;
+			sourceTree = "<group>";
+		};
+		C58E3E13135A2B9F00C05EDE /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C58E3E11135A2B9500C05EDE /* beep.wav */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +192,7 @@
 				C58E3DF4135A103F00C05EDE /* InfoPlist.strings in Resources */,
 				C58E3E01135A103F00C05EDE /* MainWindow_iPhone.xib in Resources */,
 				C58E3E08135A103F00C05EDE /* MainWindow_iPad.xib in Resources */,
+				C58E3E12135A2B9500C05EDE /* beep.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +207,7 @@
 				C58E3DFA135A103F00C05EDE /* TouchDemoAppDelegate.m in Sources */,
 				C58E3DFE135A103F00C05EDE /* TouchDemoAppDelegate_iPhone.m in Sources */,
 				C58E3E05135A103F00C05EDE /* TouchDemoAppDelegate_iPad.m in Sources */,
+				C58E3E10135A108A00C05EDE /* TouchDemoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +245,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -232,6 +255,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -241,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -248,6 +273,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

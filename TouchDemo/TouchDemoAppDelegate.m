@@ -15,6 +15,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    _touchDemoView = [[TouchDemoView alloc] initWithFrame:_window.frame];
+    _touchDemoView.backgroundColor = [UIColor greenColor];
+    [_window addSubview:_touchDemoView];
+    
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     return YES;

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TouchDemoView.h"
 
 @interface TouchDemoAppDelegate : NSObject <UIApplicationDelegate> {
-
+    TouchDemoView *_touchDemoView;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+
 
 @end
