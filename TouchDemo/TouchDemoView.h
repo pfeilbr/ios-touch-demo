@@ -13,6 +13,7 @@
     NSMutableArray *_touches;
     NSMutableArray *_views;
     SystemSoundID ssid;
+    UIImage *_image;
 }
 
 @end

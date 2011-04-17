@@ -23,8 +23,8 @@
         AudioServicesCreateSystemSoundID(soundURL, &ssid);
 
         _views = [[NSMutableArray alloc] init];
-        CGFloat width = 40;
-        CGFloat height = 40;        
+        CGFloat width = 60;
+        CGFloat height = 60;        
         for (int i = 0; i < 11; i++) {
             UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
             v.backgroundColor = [UIColor redColor];
@@ -32,14 +32,16 @@
             [self addSubview:v];
             [_views addObject:v];
         }
+        
+        _image = [UIImage imageNamed:@"round_delete"];
     }
     return self;
 }
 
-- (UIView*) getNextView {
+- (UIView*)getNextView {
     UIView *v = [_views objectAtIndex:0];
     [_views removeObjectAtIndex:0];
-    v.alpha = 1.0;
+    v.alpha = 0.5;
     return v;
 }
 
@@ -58,6 +60,8 @@
     
 	// play sound
     AudioServicesPlaySystemSound(ssid);
+    
+    [self setNeedsDisplay];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -71,48 +75,49 @@
             }
         }
     }
+    [self setNeedsDisplay];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"touchesEnded");
     __block NSMutableArray *dictsToRemove = [[NSMutableArray alloc] init];
-    [UIView animateWithDuration:0.25 animations:^{
+    //[UIView animateWithDuration:0.01 animations:^{
         for (UITouch *touch in touches) {
             for (NSMutableDictionary *dict in _touches) {
                 UITouch *t = (UITouch*)[dict  valueForKey:@"touch"];            
                 UIView *v = (UIView*)[dict valueForKey:@"view"];
                 if (t == touch) {
                     v.alpha = 0.0;
+                    [dictsToRemove addObject:dict];
                 }
-                [dictsToRemove addObject:dict];
             }
         }
-    } completion:^(BOOL finished) {
+    //} completion:^(BOOL finished) {
         for (NSMutableDictionary *dict in dictsToRemove) {
             UIView *v = (UIView*)[dict valueForKey:@"view"];
             [_views addObject:v];
         }
         [_touches removeObjectsInArray:dictsToRemove];
         [dictsToRemove release];        
-    }];
-
+    //}];
+    [self setNeedsDisplay];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    
+    NSLog(@"touchesCancelled");
+    [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect {
-    
+    //CGContextRef context = UIGraphicsGetCurrentContext();
+    for (NSMutableDictionary *dict in _touches) {
+        UITouch *t = (UITouch*)[dict  valueForKey:@"touch"];            
+        CGPoint tp = [t locationInView:self];
+        CGPoint p = CGPointMake( (tp.x - (_image.size.width/2)), (tp.y - (_image.size.height/2)) );
+        [_image drawAtPoint:p];
+    }
+    [self setNeedsDisplay];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 - (void)dealloc
 {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C535465B135A72040084FC2F /* round_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = C535465A135A72040084FC2F /* round_delete.png */; };
 		C58E3DEA135A103F00C05EDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E3DE9135A103F00C05EDE /* UIKit.framework */; };
 		C58E3DEC135A103F00C05EDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E3DEB135A103F00C05EDE /* Foundation.framework */; };
 		C58E3DEE135A103F00C05EDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58E3DED135A103F00C05EDE /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C535465A135A72040084FC2F /* round_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_delete.png; sourceTree = "<group>"; };
 		C58E3DE5135A103F00C05EDE /* TouchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58E3DE9135A103F00C05EDE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C58E3DEB135A103F00C05EDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5354658135A71E40084FC2F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C535465A135A72040084FC2F /* round_delete.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		C58E3DDA135A103E00C05EDE = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		C58E3DEF135A103F00C05EDE /* TouchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C5354658135A71E40084FC2F /* images */,
 				C58E3E13135A2B9F00C05EDE /* sounds */,
 				C58E3DF8135A103F00C05EDE /* TouchDemoAppDelegate.h */,
 				C58E3DF9135A103F00C05EDE /* TouchDemoAppDelegate.m */,
@@ -193,6 +204,7 @@
 				C58E3E01135A103F00C05EDE /* MainWindow_iPhone.xib in Resources */,
 				C58E3E08135A103F00C05EDE /* MainWindow_iPad.xib in Resources */,
 				C58E3E12135A2B9500C05EDE /* beep.wav in Resources */,
+				C535465B135A72040084FC2F /* round_delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +338,7 @@
 				C58E3E0D135A103F00C05EDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
